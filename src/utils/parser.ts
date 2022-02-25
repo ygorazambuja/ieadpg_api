@@ -21,18 +21,18 @@ function parser(text: string) {
     voterZone: getVoterZone(text),
     voterSection: getVoterSection(text),
     birthPlace: birthPlace(text),
-    birthPlaceUf: birthPlaceUf(text),
+    birthState: birthPlaceUf(text),
     fatherName: getFatherName(text),
     motherName: getMotherName(text),
     phone: getPhone(text),
     address: getAddress(text),
     email: getEmail(text),
     bloodType: getBloodType(text),
-    congregatePlace: getCongregatePlace(text),
+    congregation: getCongregatePlace(text),
     ministerialPosition: getMinisterialPosition(text),
     baptismDate: getBaptismDate(text),
     civilState: getCivilState(text),
-    schooling: getSchooling(text),
+    education: getSchooling(text),
   };
 
   return person;
@@ -74,7 +74,8 @@ const getPhone = (text: string) => getContent(text, "TELEFONE ", "- ").trim();
 
 const getAddress = (text: string) => getContent(text, "ENDEREÇO: ", "E-Mail: ");
 
-const getEmail = (text: string) => getContent(text, "E-Mail: ", "Tipo").trim();
+const getEmail = (text: string) =>
+  getContent(text, "E-Mail: ", "Tipo").replace(" ", "").trim().toLowerCase();
 
 const getBloodType = (text: string) =>
   getContent(text, "Tipo sanguíneo: ", "LUGAR QUE");
@@ -86,7 +87,9 @@ const getMinisterialPosition = (text: string) =>
   getContent(text, "MINISTERIAL: ", "DATA DE BATISMO:");
 
 const getBaptismDate = (text: string) =>
-  getContent(text, "DATA DE BATISMO: ", "ESTADO CIVIL");
+  getContent(text, "DATA DE BATISMO: ", "ESTADO CIVIL")
+    .replace(".", "-")
+    .replace(".", "-");
 
 const getCivilState = (text: string) =>
   getContent(text, "ESTADO CIVIL: ", "CÔNJUGUE");

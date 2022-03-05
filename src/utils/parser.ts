@@ -28,7 +28,7 @@ function parser(text: string) {
     address: getAddress(text),
     email: getEmail(text),
     bloodType: getBloodType(text),
-    congregation: getCongregatePlace(text),
+    congregationPlace: getCongregatePlace(text),
     role: getRole(text),
     baptismDate: getBaptismDate(text),
     civilState: getCivilState(text),

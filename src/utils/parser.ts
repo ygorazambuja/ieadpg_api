@@ -29,7 +29,7 @@ function parser(text: string) {
     email: getEmail(text),
     bloodType: getBloodType(text),
     congregation: getCongregatePlace(text),
-    ministerialPosition: getMinisterialPosition(text),
+    role: getRole(text),
     baptismDate: getBaptismDate(text),
     civilState: getCivilState(text),
     education: getSchooling(text),
@@ -83,7 +83,7 @@ const getBloodType = (text: string) =>
 const getCongregatePlace = (text: string) =>
   getContent(text, "CONGREGA: ", "CARGO");
 
-const getMinisterialPosition = (text: string) =>
+const getRole = (text: string) =>
   getContent(text, "MINISTERIAL: ", "DATA DE BATISMO:");
 
 const getBaptismDate = (text: string) =>

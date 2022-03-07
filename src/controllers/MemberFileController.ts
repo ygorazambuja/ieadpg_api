@@ -1,12 +1,15 @@
 import { Request, Response } from "express";
-import { resolve } from "path";
+import { join } from "path";
 import { renderFile } from "ejs";
 
 export class MemberFileController {
   async handle(request: Request, response: Response) {
     const member = request.body;
+    const memberFilePath = join(__dirname, "..", "assets", "memberFile.ejs");
 
-    const memberFilePath = resolve(__dirname, "..", "pdfs", "memberFile.ejs");
+    return response.send({
+      dirname: memberFilePath,
+    });
 
     renderFile(memberFilePath, { member }, (err, html) => {
       if (err) {

@@ -7,10 +7,6 @@ export class MemberFileController {
     const member = request.body;
     const memberFilePath = join(__dirname, "..", "assets", "memberFile.ejs");
 
-    return response.send({
-      dirname: memberFilePath,
-    });
-
     renderFile(memberFilePath, { member }, (err, html) => {
       if (err) {
         response.status(500).send(err);

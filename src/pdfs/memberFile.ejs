@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membro</title>
+
+    <style>
+      body {
+        font-family: "PT Sans", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+        font-size: 8px;
+      }
+      .header {
+        display: -ms-flex;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .header-img {
+        flex: 1;
+        text-align: center;
+      }
+
+      .parent {
+        border: 1px solid black;
+
+
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(13, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+      }
+
+      .parent > div {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 6px;
+      }
+
+      .div1 {
+        grid-area: 1 / 1 / 2 / 6;
+      }
+      .div2 {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      .div3 {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+      .div4 {
+        grid-area: 2 / 3 / 3 / 4;
+      }
+      .div5 {
+        grid-area: 2 / 4 / 3 / 6;
+      }
+      .div6 {
+        grid-area: 3 / 1 / 4 / 3;
+      }
+      .div7 {
+        grid-area: 3 / 3 / 4 / 4;
+      }
+      .div8 {
+        grid-area: 3 / 4 / 3 / 6;
+      }
+      .div9 {
+        grid-area: 4 / 1 / 5 / 4;
+      }
+      .div10 {
+        grid-area: 4 / 4 / 5 / 6;
+      }
+      .div11 {
+        grid-area: 5 / 1 / 6 / 6;
+      }
+      .div12 {
+        grid-area: 7 / 4 / 7 / 6;
+      }
+      .div13 {
+        grid-area: 7 / 1 / 8 / 6;
+      }
+      .div14 {
+        grid-area: 7 / 4 / 8 / 6;
+      }
+      .div15 {
+        grid-area: 8 / 1 / 9 / 6;
+      }
+      .div16 {
+        grid-area: 9 / 1 / 10 / 4;
+      }
+      .div17 {
+        grid-area: 9 / 4 / 10 / 6;
+      }
+      .div18 {
+        grid-area: 10 / 1 / 11 / 6;
+      }
+      .div19 {
+        grid-area: 11 / 3 / 12 / 6;
+      }
+      .div20 {
+        grid-area: 11 / 1 / 12 / 3;
+      }
+
+      .div21 {
+        grid-area: 12 / 1 / 13 / 6;
+      }
+      .div22 {
+        grid-area: 12 / 3 / 13 / 6;
+      }
+      .div23 {
+        grid-area: 13 / 1 / 14 / 6;
+      }
+      .div24 {
+        grid-area: 6 / 1 / 7 / 6;
+      }
+
+      .blue-text {
+        color: #1a73e8;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .normal-text {
+        text-transform: uppercase;
+      }
+
+      .signature {
+        text-align: center;
+        padding-top: 38px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-img">
+        <img src="https://via.placeholder.com/150" alt="Logo" />
+      </div>
+      <div style="flex: 1">
+        <div>Rua Pernambuco 367, Centro – Pedro Gomes – MS</div>
+        <div>Cep 79.410-000 Fone (67) 3230-1091</div>
+        <div>www.ieadpg@hotmail.com.br CNPJ 15.465.677 0001-53 CENTRAL</div>
+        <div>Rua Miranda Reis 1221 – Coxim – MS</div>
+      </div>
+    </div>
+
+    <div class="">
+      <p>CADASTRO DE MEMBRO RECEBIDO POR BATISMO OU ACLAMAÇÃO</p>
+      <p>
+        É indispensável anexar nesta ficha a cópia do RG E CPF, bem como uma
+        foto recente no formato 3x4
+      </p>
+      <p>
+        A ADMISSAO AO QUADRO DE ASSOCIADOS DESTA IGREJA SERA MEDIANTE OS
+        REQUISITOS: CONHECIMENTO PREVIO DAS ATIVIDADES E OBJETIVOS DA IGREJA,
+        ACOMPANHADO DE DECLARACAO DE ACEITAÇAO DAS NORMAS ESTATUTARIAS E
+        REGIMENTO INTERNO; ONDE CONFESSA EXPRESSAMENTE QUE:
+      </p>
+      <ol>
+        <li>
+          ACEITA A BIBLIA SAGRADA (VERSAO REVISTA E CORREGIDA POR JOAO FERREIRA
+          DE ALMEIDA), COMO ÚNICA REGRA INFALIVEL DE FE NORMATIVA PARA A VIDA EO
+          CARATER CRISTAO;
+        </li>
+        <li>
+          CRE EM UM SO DEUS, QUE SUBSISTE ETERNAMENTE EM TRÊS PESSOAS: O PAI, O
+          FILHO EO ESPIRO SANTO;
+        </li>
+        <li>
+          CONCORDA COM O SISTEMA LITURGICO DA IGREJA, FORMA DE CULTUAR A DEUS,
+          NAS SUAS DIVERSAS FORMAS E PRATICAS, SUAS DOUTRINAS, COSTUMES E FORMA
+          DE ANGARIAR RECURSOS PARA A SUA MANUTENCAO.
+        </li>
+      </ol>
+      <p>
+        COMO DECLARACAO DE CONCORDIA E CONHECIMENTO DO ESTATUTO E REGIMENTO
+        INTERNO DESTA INSTITUICAO, ASSUMO TODOS OS COMPROMISSOS E REQUISITOS
+        SUPRACITADOS:
+      </p>
+    </div>
+
+    <div>
+      <div class="parent">
+        <div class="div1">
+          <span class="blue-text">Nome: </span>
+          <span class="normal-text"> <%= member.name %> </span>
+        </div>
+        <div class="div2">
+          <span class="blue-text">RG: </span>
+          <span class="normal-text"> <%= member.rg %> </span>
+        </div>
+        <div class="div3">
+          <span class="blue-text">Emissão: </span>
+          <span class="normal-text"> <%= member.rgEmittedDate %> </span>
+        </div>
+        <div class="div4">
+          <span class="blue-text">CPF: </span>
+          <span class="normal-text"> <%= member.cpf %> </span>
+        </div>
+        <div class="div5">
+          <span class="blue-text">Data de Nascimento: </span>
+          <span class="normal-text"> <%= member.birthDate %> </span>
+        </div>
+        <div class="div6">
+          <span class="blue-text">Titulo: </span>
+          <span class="normal-text"> <%= member.voterTitle %> </span>
+        </div>
+        <div class="div7">
+          <span class="blue-text">Zona: </span>
+          <span class="normal-text"> <%= member.voterZone %> </span>
+        </div>
+        <div class="div8">
+          <span class="blue-text">Seção: </span>
+          <span class="normal-text"> <%= member.voterSection %> </span>
+        </div>
+        <div class="div9">
+          <span class="blue-text">Local de Nascimento: </span>
+          <span class="normal-text"> <%= member.birthPlace %> </span>
+        </div>
+        <div class="div10">
+          <span class="blue-text">UF: </span>
+          <span class="normal-text"> <%= member.birthState %> </span>
+        </div>
+        <div class="div11">
+          <span class="blue-text">Pai: </span>
+          <span class="normal-text"> <%= member.fatherName %> </span>
+        </div>
+        <div class="div24">
+          <span class="blue-text">Mãe: </span>
+          <span class="normal-text"> <%= member.motherName %> </span>
+        </div>
+        <div class="div13">
+          <span class="blue-text">Telefone / Celular: </span>
+          <span class="normal-text"> <%= member.phone %> </span>
+        </div>
+        <div class="div15">
+          <span class="blue-text">Endereço: </span>
+          <span class="normal-text"> <%= member.address %> </span>
+        </div>
+        <div class="div16">
+          <span class="blue-text">E-mail: </span>
+          <span class="normal-text">
+            <%= member.email %>
+          </span>
+        </div>
+        <div class="div17">
+          <span class="blue-text">Tipo Sanguineo: </span>
+          <span class="normal-text">
+            <%= member.bloodType %>
+          </span>
+        </div>
+        <div class="div18">
+          <span class="blue-text">Lugar que congrega: </span>
+          <span class="normal-text">
+            <%= member.congregation %>
+          </span>
+        </div>
+        <div class="div19">
+          <span class="blue-text">Cargo Ministerial: </span>
+          <span class="normal-text">
+            <%= member.ministerialPosition %>
+          </span>
+        </div>
+        <div class="div20">
+          <span class="blue-text">Data de Batismo: </span>
+          <span class="normal-text">
+            <%= member.baptismDate %>
+          </span>
+        </div>
+        <div class="div21">
+          <span class="blue-text">Estado Civil: </span>
+          <span class="normal-text">
+            <%= member.civilState %>
+          </span>
+        </div>
+        <div class="div22">
+          <span class="blue-text">Conjugue: </span>
+          <span class="normal-text">
+            <%= member.spouseName %>
+          </span>
+        </div>
+        <div class="div23">
+          <span class="blue-text">Escolaridade: </span>
+          <span class="normal-text">
+            <%= member.education %>
+          </span>
+        </div>
+      </div>
+
+      <div class="signature">
+        <span> ASSINATURA DO ASSOCIADO </span>
+      </div>
+    </div>
+  </body>
+</html>

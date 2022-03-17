@@ -17,7 +17,7 @@ function parser(text: string) {
     rg: getRg(text),
     rgEmissionDate: formatDate(getEmissao(text)),
     cpf: formatCpf(getCpf(text)),
-    birthDate: getDate(text),
+    birthDate: formatDate(getDate(text)),
     voterTitle: getVoterTitle(text),
     voterZone: getVoterZone(text),
     voterSession: getVoterSection(text),

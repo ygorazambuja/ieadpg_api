@@ -1,5 +1,6 @@
 import textract from "textract";
 import path from "path";
+import { convertDDMMYYYYtoYYYYMMDD } from "./date";
 
 export function parseFile(filePath: string) {
   return new Promise((resolve, reject) => {
@@ -14,29 +15,31 @@ function parser(text: string) {
   const person = {
     name: getName(text),
     rg: getRg(text),
-    rgEmittedDate: getEmissao(text),
+    rgEmissionDate: formatDate(getEmissao(text)),
     cpf: formatCpf(getCpf(text)),
     birthDate: getDate(text),
     voterTitle: getVoterTitle(text),
     voterZone: getVoterZone(text),
-    voterSection: getVoterSection(text),
-    birthPlace: birthPlace(text),
+    voterSession: getVoterSection(text),
+    birthCity: birthPlace(text),
     birthState: birthPlaceUf(text),
     fatherName: getFatherName(text),
     motherName: getMotherName(text),
-    phone: getPhone(text),
+    phoneNumber: getPhone(text),
     address: getAddress(text),
     email: getEmail(text),
     bloodType: getBloodType(text),
     congregationPlace: getCongregatePlace(text),
     role: getRole(text),
-    baptismDate: getBaptismDate(text),
+    baptismDate: formatDate(getBaptismDate(text)),
     civilState: getCivilState(text),
     education: getSchooling(text),
   };
 
   return person;
 }
+
+const formatDate = (date: string) => convertDDMMYYYYtoYYYYMMDD(date);
 
 const getName = (text: string) => getContent(text, "NOME: ", "RG:");
 
